@@ -18,10 +18,10 @@ const Main =() =>{
        {
         response ?
         <View>
-            <Text>{response.name}</Text>
-            <Text>Humidity -{response.main.humidity}</Text>
-            <Text>Temperature -{response.main.temp}</Text>
-            <Text>Visibility -{response.visibility}</Text>
+            {response.name?<Text>{response.name}</Text>:null}
+            {response.main&&response.main.humidity?<Text>Humidity -{response.main.humidity}</Text>:null}
+            {response.main&&response.main.temp?<Text>Temperature -{response.main.temp}</Text>:null}
+            {response.visibility?<Text>Visibility -{response.visibility}</Text>:null}
        </View>
        :null}
      
